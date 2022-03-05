@@ -26,6 +26,16 @@ willSet, didSet 두가지의 프로퍼티 옵저버가 있다.
 
 # 2. Swift_ToDo_List
 
+<p>
+<img width="200" alt="스크린샷 2022-03-06 오전 3 13 17" src="https://user-images.githubusercontent.com/75043852/156895377-358c1164-4e6a-421d-9c2e-0fd99968b65d.png">
+<img width="200" alt="스크린샷 2022-03-06 오전 3 13 55" src="https://user-images.githubusercontent.com/75043852/156895381-c1e2a26e-60ee-42d1-ba16-9b0eef560791.png">
+ </p>
+ <p>
+<img width="200" alt="스크린샷 2022-03-06 오전 3 14 15" src="https://user-images.githubusercontent.com/75043852/156895382-42a3749a-55d9-4b45-b0a7-6989bbd7b1c5.png">
+<img width="200" alt="스크린샷 2022-03-06 오전 3 14 31" src="https://user-images.githubusercontent.com/75043852/156895384-394d75ff-7432-48a2-ade8-a36a5f5a2c47.png">
+<img width="200" alt="스크린샷 2022-03-06 오전 3 14 51" src="https://user-images.githubusercontent.com/75043852/156895385-bf7ff2ed-7a34-42b4-ab10-18dfd5136458.png">
+</p>
+
 ### 2-1. UITableView
 
 ##### -> 
