@@ -14,6 +14,8 @@ import UIKit
 class RoundButton: UIButton {
     // annotation으로 스토리보드에서도 isRound값을 변경할 수 있게 함. 즉 IB와 해당 변수가 연결되었다라는 것을 컴파일러에게 알리는 신호 @IBInspectable
     @IBInspectable var isRound: Bool = false {
+        //프로퍼티 옵저버 willSet과 didSet 중 하나, 프로퍼티의 값 변경이 완료되고난 후 실행된다.
+        //연산프로퍼티에 조건부로 사용 가능 but 저장 프로퍼티에만 사용 가능하다고 생각해도 됨. 여기서도 isRound라는 stored Property에 적용되었다.
         didSet {
             if isRound {
                 // 정사각형 버튼이 원이 됨
