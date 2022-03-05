@@ -4,11 +4,12 @@
 
 SingleView 계산기 App입니다.
 IOS 학습에 중점을 두었기 때문에, Stack을 사용한 연산자 우선순위 처리까지는 구현하지 않았고, 입력되는 순서대로 계산이 되도록 구현하였다.
-RoundButton 클래스를 @IBDesignable, @IBInspectable annotation으로 작성하여 속성 Inspector에서 적용하 수 있게 하였고,
+RoundButton 클래스를 @IBDesignable, @IBInspectable annotation으로 작성하여 속성 Inspector에서 적용하 수 있게 하였고, didSet 프로퍼티 옵저버를 사용해 UIButton의 모양을 바꿔주었다.
 소숫점연산, Clear 등 아이폰 내장 계산기와 유사하게 구현하였다.
 
 연산자 별 계산은 enum으로 정의해놓은 연산자 case와, 연산자를 인자로 받아 switch문으로 처리하느 operation함수로 정의하였다.
-@IBAction함수, @IBOutlet 변수르 storyboard와 코드 상에서 연결하는 것이 핵심이었다.
+@IBAction함수, @IBOutlet 변수를 storyboard와 코드 상에서 연결하는 것이 핵심이었다.
+
 
 <p>
 <img width="200" alt="스크린샷 2022-03-06 오전 1 06 39" src="https://user-images.githubusercontent.com/75043852/156891174-b8ec6761-fbe4-4c93-b51a-afb4d78d25d0.png">
