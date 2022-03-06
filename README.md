@@ -42,6 +42,8 @@ willSet, didSet 두가지의 프로퍼티 옵저버가 있다.
 ##### -> UIAlertAction은 title, style( .cancel, .default...), handler(클로저 형태)를 담아 생성하고, UIAlertController에 addAction하여 포함시켰다.
 ##### -> self.present로써 '+' 버튼이 클릭된 경우에 해당 alert가 화면에 표시되도록 하였다. 그 이후의 action은 각 UIAlertAction의 핸들러에 구현된 대로 처리된다.
 ##### ==> 여기서 Class Instance와 클로저 사이의 강한 순환참조로 인해 Reference count가 서로 절대 0이 되지 않아 메모리 누수가 생기는 것을 방지하기 위해 weak self 를 
-### 2-1. UITableView
 
-##### -> 
+### 2-2. UITableViewDataSource protocol
+
+##### -> numberOfRowsInSection : 각 섹션에 표시할 행 갯수 설정 
+##### -> cellForRowAt : 특정 Cell에 대한 정보를 전달하여 Cell을 반환해주는 메서드 ( 셀을 구성할 데이터를 구성하고 해당 메서드에 전달하면, 구성한 cell이 TableView에 표시된다 )
