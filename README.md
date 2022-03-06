@@ -57,8 +57,7 @@ UITableViewDelegate에는 행의 높이, Action등을 정할 수 있다.
 
 #### 2-2-2. UITableViewDelegate protocol
 
-##### -> 
-##### -> 
+##### -> ViewController가 UITableViewDelegate 프로토콜을 준수하도록 extension을 달고 didSelectRowAt메서드를 구현하여, 셀 클릭 시에 할 일 완료여부가 바뀌도록 구현하였다.
 
 ### 2-3. UserDefaults
 UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 쌍으로 지속적으로 저장하는 인터페이스이다. 런타임 시 개체를 사용하여 App이 사용자의 기본 데이터베이스에서 사용하는 기본값을 읽기 때문에 값이 필요할 때마다 데이터베이스를 열 필요가 없어진다.
