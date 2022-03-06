@@ -43,7 +43,14 @@ willSet, didSet 두가지의 프로퍼티 옵저버가 있다.
 ##### -> self.present로써 '+' 버튼이 클릭된 경우에 해당 alert가 화면에 표시되도록 하였다. 그 이후의 action은 각 UIAlertAction의 핸들러에 구현된 대로 처리된다.
 ##### ==> 여기서 Class Instance와 클로저 사이의 강한 순환참조로 인해 Reference count가 서로 절대 0이 되지 않아 메모리 누수가 생기는 것을 방지하기 위해 weak self 를 
 
-### 2-2. UITableViewDataSource protocol
+### 2-2. TableView
+
+TableView는 섹션을 이용해 행을 그룹화하여 콘텐츠를 정렬하여 볼 수 있게 해준다. 
+이를 사용하기 위해서는 UITableViewDelegate, UITableViewDataSource 총 두가지 프로토콜을 구현해야한다.
+UITableViewDataSource에는 섹션 수, 섹션 당 행 수, 어떤 데이터를 표시할 것인지 
+UITableViewDelegate에는 행의 높이, Action등을 정할 수 있다.
+
+#### 2-2-1. UITableViewDataSource protocol
 
 ##### -> numberOfRowsInSection : 각 섹션에 표시할 행 갯수 설정 
 ##### -> cellForRowAt : 특정 Cell에 대한 정보를 전달하여 Cell을 반환해주는 메서드 ( 셀을 구성할 데이터를 구성하고 해당 메서드에 전달하면, 구성한 cell이 TableView에 표시된다 )
