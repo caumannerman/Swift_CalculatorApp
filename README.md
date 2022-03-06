@@ -36,6 +36,12 @@ willSet, didSet 두가지의 프로퍼티 옵저버가 있다.
 <img width="200" alt="스크린샷 2022-03-06 오전 3 14 51" src="https://user-images.githubusercontent.com/75043852/156895385-bf7ff2ed-7a34-42b4-ab10-18dfd5136458.png">
 </p>
 
+### 2-1. UIAlertController, UIAlertAction 
+
+##### -> UIAlertController는 UIViewController프로토콜을 따르는 open class이다. 
+##### -> UIAlertAction은 title, style( .cancel, .default...), handler(클로저 형태)를 담아 생성하고, UIAlertController에 addAction하여 포함시켰다.
+##### -> self.present로써 '+' 버튼이 클릭된 경우에 해당 alert가 화면에 표시되도록 하였다. 그 이후의 action은 각 UIAlertAction의 핸들러에 구현된 대로 처리된다.
+
 ### 2-1. UITableView
 
 ##### -> 
