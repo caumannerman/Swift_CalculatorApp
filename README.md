@@ -75,3 +75,15 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 </p>
 <img width="400" alt="1" src="https://user-images.githubusercontent.com/75043852/160754702-cee11c76-9bd4-4a2b-95b6-fbe87ec33999.png">
 <img width="400" alt="2" src="https://user-images.githubusercontent.com/75043852/160754708-fed5fbca-afd1-4098-bf28-842dd6371fed.png">
+
+
+
+# 4. 물마시기 알림 앱 
+
+### 4-1. UNNotificationRequest (User Notification)
+
+##### identifier 작성해주어야 함 .(UUID 와 같은)
+##### UNMutableNotificationContent - 알림에 나타날 내용들을 정의  (ex. Content.title, Content.body ... 뱃지, 소리 등 ..)
+##### Trigger( 어떤 조건에서 알림을 발생시킬지 ) - Calendar(날짜 기준), TimeInterval(시간 간격으로), Location(위치 기준)..
+
+Request들은 UNNotificationCenter에 저장되어있다가, 조건에 부합하는 순간에 Trigger
