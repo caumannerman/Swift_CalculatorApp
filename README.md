@@ -87,3 +87,14 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 ##### Trigger( 어떤 조건에서 알림을 발생시킬지 ) - Calendar(날짜 기준), TimeInterval(시간 간격으로), Location(위치 기준)..
 
 Request들은 UNNotificationCenter에 저장되어있다가, 조건에 부합하는 순간에 Trigger
+
+### 4-2. UserDefaults 사용 ( Notification들을 저장 )
+
+<img width="707" alt="스크린샷 2022-03-30 오후 5 45 36" src="https://user-images.githubusercontent.com/75043852/160790624-9d1f2ad9-8179-424d-95b8-7b447b676329.png">
+
+##### -> UserDefaults는 싱글톤 패턴으로 설계되어, 앱 전체에서 "하나의 instance"만 존재한다!
+##### -> 추가: UserDefaults.standard.set(~~, forkey: "key")와 같이
+##### -> 가져오기: let year = UserDefaults.standard.integer(forKey: "year")
+##### -> 삭제: UserDefaults.standard.removeObject(forKey: "age")
+
+
