@@ -1,0 +1,20 @@
+//
+//  ViewController.swift
+//  InstagramUISample
+//
+//  Created by 양준식 on 2022/04/04.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        view.backgroundColor = .red
+    }
+
+
+}
+
