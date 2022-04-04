@@ -14,6 +14,8 @@
 		A594D62E27FB0F1000015F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A594D62C27FB0F1000015F5B /* LaunchScreen.storyboard */; };
 		A594D63727FB0F2500015F5B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A594D63627FB0F2500015F5B /* SnapKit */; };
 		A594D63927FB113600015F5B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594D63827FB113600015F5B /* TabBarController.swift */; };
+		A594D63C27FB18D200015F5B /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594D63B27FB18D200015F5B /* FeedTableViewCell.swift */; };
+		A594D63E27FB225C00015F5B /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594D63D27FB225C00015F5B /* UIButton+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		A594D62D27FB0F1000015F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A594D62F27FB0F1000015F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A594D63827FB113600015F5B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A594D63B27FB18D200015F5B /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		A594D63D27FB225C00015F5B /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				A594D62A27FB0F1000015F5B /* Assets.xcassets */,
 				A594D62C27FB0F1000015F5B /* LaunchScreen.storyboard */,
 				A594D62F27FB0F1000015F5B /* Info.plist */,
+				A594D63D27FB225C00015F5B /* UIButton+.swift */,
 			);
 			path = InstagramUISample;
 			sourceTree = "<group>";
@@ -73,6 +78,7 @@
 			children = (
 				A594D62527FB0F0E00015F5B /* FeedViewController.swift */,
 				A594D63827FB113600015F5B /* TabBarController.swift */,
+				A594D63B27FB18D200015F5B /* FeedTableViewCell.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -154,9 +160,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A594D62627FB0F0E00015F5B /* FeedViewController.swift in Sources */,
+				A594D63E27FB225C00015F5B /* UIButton+.swift in Sources */,
 				A594D63927FB113600015F5B /* TabBarController.swift in Sources */,
 				A594D62227FB0F0E00015F5B /* AppDelegate.swift in Sources */,
 				A594D62427FB0F0E00015F5B /* SceneDelegate.swift in Sources */,
+				A594D63C27FB18D200015F5B /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

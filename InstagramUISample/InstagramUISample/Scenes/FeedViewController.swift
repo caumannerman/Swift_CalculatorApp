@@ -16,6 +16,8 @@ class FeedViewController: UIViewController {
         tableView.backgroundColor = .systemBackground
         tableView.separatorStyle = .none
         tableView.dataSource = self
+        //cell 등록
+        tableView.register(FeedTableViewCell.self, forCellReuseIdentifier: "FeedTableViewCell")
         
         return tableView
     }()
@@ -38,8 +40,11 @@ extension FeedViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = .black
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
+        
+        //여기서는 cell이 클릭되면 안되므로!
+        cell.selectionStyle = .none
+        cell.setup()
         
         return cell
     }
