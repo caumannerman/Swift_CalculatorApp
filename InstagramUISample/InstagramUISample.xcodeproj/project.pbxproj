@@ -19,6 +19,7 @@
 		A594D64227FB4E8700015F5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594D64127FB4E8700015F5B /* ProfileViewController.swift */; };
 		A594D64427FB546800015F5B /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594D64327FB546800015F5B /* ProfileDataView.swift */; };
 		A5A542FD27FC19D200D25A5E /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A542FC27FC19D200D25A5E /* ProfileCollectionViewCell.swift */; };
+		A5A542FF27FC284E00D25A5E /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A542FE27FC284E00D25A5E /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A594D64127FB4E8700015F5B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A594D64327FB546800015F5B /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 		A5A542FC27FC19D200D25A5E /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		A5A542FE27FC284E00D25A5E /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				A594D62527FB0F0E00015F5B /* FeedViewController.swift */,
 				A594D63B27FB18D200015F5B /* FeedTableViewCell.swift */,
+				A5A542FE27FC284E00D25A5E /* UploadViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A594D62627FB0F0E00015F5B /* FeedViewController.swift in Sources */,
+				A5A542FF27FC284E00D25A5E /* UploadViewController.swift in Sources */,
 				A5A542FD27FC19D200D25A5E /* ProfileCollectionViewCell.swift in Sources */,
 				A594D63E27FB225C00015F5B /* UIButton+.swift in Sources */,
 				A594D63927FB113600015F5B /* TabBarController.swift in Sources */,
