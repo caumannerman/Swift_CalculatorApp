@@ -10,7 +10,7 @@ RoundButton 클래스를 @IBDesignable, @IBInspectable annotation으로 작성�
 @IBAction함수, @IBOutlet 변수를 storyboard와 코드 상에서 연결하는 것이 핵심이었다.
 didset과 위의 두 annotation들은 버튼의 모양을 둥글게 만드는 데 사용하였다.
 
-### 프로퍼티 옵저버 
+### 1.1 프로퍼티 옵저버 
 swift가 제공하는 프로퍼티 옵저버에는 willSet, didSet 두가지가 있다.
 프로퍼티 옵저버는 property의 값 변화를 관찰하고 이에 응답한다.
 조건에 따라 연산 프로퍼티에 적용 가능하나, 기본적으로 저장 프로퍼티 (Stored Property)에 적용된다.
@@ -18,11 +18,11 @@ swift가 제공하는 프로퍼티 옵저버에는 willSet, didSet 두가지가 
 
 <img width="400" alt="스크린샷 2022-04-12 오후 10 49 28" src="https://user-images.githubusercontent.com/75043852/162977548-9438a3d7-dd6e-4bc1-996f-5456651807dc.png">
 
-### @IBInspectable
+### 1.2 @IBInspectable
 annotation을 달아, 스토리보드에서 @IBInspectable이 달린 변수의 값을 변경할 수 있게 함. 즉 IB와 해당 변수가 연결되었다라는 것을 컴파일러에게 알리는 신호 @IBInspectable
 
 
-### @IBDesignable
+### 1.3 @IBDesignable
 변경된 설정값을 스토리보드상에서 실시간으로 확인할 수 있도록 , 즉 런타임(시뮬레이터)이 아니라 컴파일타임에 확인할 수 있다.
 
 
