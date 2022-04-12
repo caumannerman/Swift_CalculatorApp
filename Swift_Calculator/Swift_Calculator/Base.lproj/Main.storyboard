@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-ho-NHn">
-                                <rect key="frame" x="24" y="68" width="366" height="150"/>
+                                <rect key="frame" x="24" y="68" width="380" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="zZl-bT-zFy"/>
                                 </constraints>
@@ -26,16 +26,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RJ-JO-GMY">
-                                <rect key="frame" x="24" y="242" width="366" height="596"/>
+                                <rect key="frame" x="24" y="242" width="380" height="626"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t2o-Hf-gZp">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="471"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="488.33333333333331"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TK3-zK-8et">
-                                                <rect key="frame" x="0.0" y="0.0" width="366" height="88"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="380" height="91.333333333333329"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O84-pZ-kBg" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="273.5" height="88"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="283.66666666666669" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
@@ -51,7 +51,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z44-2t-WDM" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="278.5" y="0.0" width="87.5" height="88"/>
+                                                        <rect key="frame" x="288.66666666666669" y="0.0" width="91.333333333333314" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Z44-2t-WDM" secondAttribute="height" id="9mV-eM-BT3"/>
@@ -71,10 +71,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3of-eN-0GM">
-                                                <rect key="frame" x="0.0" y="96" width="366" height="87.5"/>
+                                                <rect key="frame" x="0.0" y="99.333333333333314" width="380" height="91.333333333333314"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKd-ub-4GX" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="87.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="hKd-ub-4GX" secondAttribute="height" multiplier="1:1" id="hfb-w6-umU"/>
@@ -92,7 +92,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkM-lX-DyP" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="93" y="0.0" width="87.5" height="87.5"/>
+                                                        <rect key="frame" x="96.333333333333343" y="0.0" width="91.333333333333343" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="BkM-lX-DyP" secondAttribute="height" id="8xw-Da-aag"/>
@@ -110,7 +110,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-I1-ba8" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="185.5" y="0.0" width="88" height="87.5"/>
+                                                        <rect key="frame" x="192.66666666666666" y="0.0" width="90.999999999999972" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="qc1-I1-ba8" secondAttribute="height" id="2XV-xL-DH7"/>
@@ -128,7 +128,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIA-k2-8k4" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="278.5" y="0.0" width="87.5" height="87.5"/>
+                                                        <rect key="frame" x="288.66666666666669" y="0.0" width="91.333333333333314" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="EIA-k2-8k4" secondAttribute="height" id="wXt-s1-bzp"/>
@@ -148,10 +148,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fDL-76-LCF">
-                                                <rect key="frame" x="0.0" y="191.5" width="366" height="88"/>
+                                                <rect key="frame" x="0.0" y="198.66666666666669" width="380" height="91"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-FF-VNh" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="91"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="kOx-FF-VNh" secondAttribute="height" id="bjC-Ug-aem"/>
@@ -169,7 +169,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Us-HB-wWM" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="93" y="0.0" width="87.5" height="88"/>
+                                                        <rect key="frame" x="96.333333333333343" y="0.0" width="91.333333333333343" height="91"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="5Us-HB-wWM" secondAttribute="height" id="iJL-JC-gcd"/>
@@ -187,7 +187,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMY-S7-rfd" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="185.5" y="0.0" width="88" height="88"/>
+                                                        <rect key="frame" x="192.66666666666666" y="0.0" width="90.999999999999972" height="91"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="YMY-S7-rfd" secondAttribute="height" id="ccm-B1-Jz2"/>
@@ -205,7 +205,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYn-tf-iA4" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="278.5" y="0.0" width="87.5" height="88"/>
+                                                        <rect key="frame" x="288.66666666666669" y="0.0" width="91.333333333333314" height="91"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="vYn-tf-iA4" secondAttribute="height" id="F40-Tw-kdC"/>
@@ -225,10 +225,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SOR-ds-8X9">
-                                                <rect key="frame" x="0.0" y="287.5" width="366" height="87.5"/>
+                                                <rect key="frame" x="0.0" y="297.66666666666663" width="380" height="91.333333333333314"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csh-tE-Qla" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="87.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="csh-tE-Qla" secondAttribute="height" id="bDd-X9-CGy"/>
@@ -246,7 +246,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyV-Yr-vYm" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="93" y="0.0" width="87.5" height="87.5"/>
+                                                        <rect key="frame" x="96.333333333333343" y="0.0" width="91.333333333333343" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="UyV-Yr-vYm" secondAttribute="height" id="6YA-Ip-4D7"/>
@@ -264,7 +264,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGw-rb-Roe" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="185.5" y="0.0" width="88" height="87.5"/>
+                                                        <rect key="frame" x="192.66666666666666" y="0.0" width="90.999999999999972" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="WGw-rb-Roe" secondAttribute="height" id="qYD-ed-nsN"/>
@@ -282,7 +282,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3i-dp-dFD" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="278.5" y="0.0" width="87.5" height="87.5"/>
+                                                        <rect key="frame" x="288.66666666666669" y="0.0" width="91.333333333333314" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="E3i-dp-dFD" secondAttribute="height" id="MAd-Fw-X7O"/>
@@ -302,10 +302,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I5k-eN-oVx">
-                                                <rect key="frame" x="0.0" y="383" width="366" height="88"/>
+                                                <rect key="frame" x="0.0" y="397" width="380" height="91.333333333333314"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IV-BQ-xNL" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="180.5" height="88"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -320,7 +320,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf3-Vk-wde" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="185.5" y="0.0" width="88" height="88"/>
+                                                        <rect key="frame" x="192.66666666666666" y="0.0" width="90.999999999999972" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Kf3-Vk-wde" secondAttribute="height" id="Bbg-i5-FDY"/>
@@ -338,7 +338,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8b-9e-98s" customClass="RoundButton" customModule="Swift_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="278.5" y="0.0" width="87.5" height="88"/>
+                                                        <rect key="frame" x="288.66666666666669" y="0.0" width="91.333333333333314" height="91.333333333333329"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="d8b-9e-98s" secondAttribute="height" id="Hqq-bH-6oo"/>
@@ -361,8 +361,6 @@
                                         <constraints>
                                             <constraint firstItem="7IV-BQ-xNL" firstAttribute="trailing" secondItem="UyV-Yr-vYm" secondAttribute="trailing" id="AOb-yn-7to"/>
                                             <constraint firstItem="3of-eN-0GM" firstAttribute="height" secondItem="TK3-zK-8et" secondAttribute="height" id="QtG-v3-HdJ"/>
-                                            <constraint firstItem="TK3-zK-8et" firstAttribute="top" secondItem="t2o-Hf-gZp" secondAttribute="top" constant="20" id="eaY-FF-ulC"/>
-                                            <constraint firstItem="TK3-zK-8et" firstAttribute="top" secondItem="t2o-Hf-gZp" secondAttribute="top" constant="10" id="fPh-K6-9Zf"/>
                                             <constraint firstItem="I5k-eN-oVx" firstAttribute="height" secondItem="TK3-zK-8et" secondAttribute="height" id="gei-st-urv"/>
                                             <constraint firstItem="SOR-ds-8X9" firstAttribute="height" secondItem="TK3-zK-8et" secondAttribute="height" id="r7Y-fJ-IqL"/>
                                             <constraint firstItem="fDL-76-LCF" firstAttribute="height" secondItem="TK3-zK-8et" secondAttribute="height" id="uKd-yb-yoC"/>
