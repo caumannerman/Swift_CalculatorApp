@@ -3,18 +3,27 @@
 구동 영상 : https://www.youtube.com/watch?v=SQm1Ms4QGJk
 
 SingleView 계산기 App입니다.
-IOS 학습에 중점을 두었기 때문에, Stack을 사용한 연산자 우선순위 처리까지는 구현하지 않았고, 입력되는 순서대로 계산이 되도록 구현하였다.
-RoundButton 클래스를 @IBDesignable, @IBInspectable annotation으로 작성하여 속성 Inspector에서 적용하 수 있게 하였고, didSet 프로퍼티 옵저버를 사용해 UIButton의 모양을 바꿔주었다.
-소숫점연산, Clear 등 아이폰 내장 계산기와 유사하게 구현하였다.
-연산자 별 계산은 enum으로 정의해놓은 연산자 case와, 연산자를 인자로 받아 switch문으로 처리하느 operation함수로 정의하였다.
+IOS 학습에 중점을 두었기 때문에, 자료구조시간에 배우는 Stack을 사용한 연산자 우선순위 처리까지는 구현하지 않았고, 입력되는 순서대로 계산이 되도록 구현하였다.
+RoundButton 클래스를 @IBDesignable, @IBInspectable annotation으로 작성하여 속성 Inspector에서 적용할 수 있게 하였고, didSet 프로퍼티 옵저버를 사용해 UIButton의 모양을 바꿔주었다.
+소숫점 연산, Clear 등 아이폰 내장 계산기와 유사하게 구현하였다.
+연산자 별 계산은 enum으로 정의해놓은 연산자 case와, 연산자를 인자로 받아 switch문으로 처리하는 operation함수로 정의하였다.
 @IBAction함수, @IBOutlet 변수를 storyboard와 코드 상에서 연결하는 것이 핵심이었다.
+didset과 위의 두 annotation들은 버튼의 모양을 둥글게 만드는 데 사용하였다.
 
 ### 프로퍼티 옵저버 
-willSet, didSet 두가지의 프로퍼티 옵저버가 있다.
+swift가 제공하는 프로퍼티 옵저버에는 willSet, didSet 두가지가 있다.
+프로퍼티 옵저버는 property의 값 변화를 관찰하고 이에 응답한다.
 조건에 따라 연산 프로퍼티에 적용 가능하나, 기본적으로 저장 프로퍼티 (Stored Property)에 적용된다.
 저장 프로퍼티의 값이 변화하기 직전에 willSet -> 값 변화 -> 값이 변한 직후에 didSet 이 실행된다.
 
+<img width="400" alt="스크린샷 2022-04-12 오후 10 49 28" src="https://user-images.githubusercontent.com/75043852/162977548-9438a3d7-dd6e-4bc1-996f-5456651807dc.png">
 
+### @IBInspectable
+annotation을 달아, 스토리보드에서 @IBInspectable이 달린 변수의 값을 변경할 수 있게 함. 즉 IB와 해당 변수가 연결되었다라는 것을 컴파일러에게 알리는 신호 @IBInspectable
+
+
+### @IBDesignable
+변경된 설정값을 스토리보드상에서 실시간으로 확인할 수 있도록 , 즉 런타임(시뮬레이터)이 아니라 컴파일타임에 확인할 수 있다.
 
 
 <p>
