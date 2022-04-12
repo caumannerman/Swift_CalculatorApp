@@ -45,28 +45,42 @@ annotation을 달아, 스토리보드에서 @IBInspectable이 달린 변수의 �
 <img width="200" alt="스크린샷 2022-03-06 오전 3 14 51" src="https://user-images.githubusercontent.com/75043852/156895385-bf7ff2ed-7a34-42b4-ab10-18dfd5136458.png">
 </p>
 
-### 2-1. UIAlertController, UIAlertAction 
+### 2.1 UIAlertController, UIAlertAction 
 
 ##### -> UIAlertController는 UIViewController프로토콜을 따르는 open class이다. 
 ##### -> UIAlertAction은 title, style( .cancel, .default...), handler(클로저 형태)를 담아 생성하고, UIAlertController에 addAction하여 포함시켰다.
 ##### -> self.present로써 '+' 버튼이 클릭된 경우에 해당 alert가 화면에 표시되도록 하였다. 그 이후의 action은 각 UIAlertAction의 핸들러에 구현된 대로 처리된다.
 ##### ==> 여기서 Class Instance와 클로저 사이의 강한 순환참조로 인해 Reference count가 서로 절대 0이 되지 않아 메모리 누수가 생기는 것을 방지하기 위해 weak self 를 
 
-### 2-2. TableView
+### 2.2 TableView
 
 TableView는 섹션을 이용해 행을 그룹화하여 콘텐츠를 정렬하여 볼 수 있게 해준다. 
 이를 사용하기 위해서는 UITableViewDelegate, UITableViewDataSource 총 두가지 프로토콜을 구현해야한다.
-UITableViewDataSource에는 섹션 수, 섹션 당 행 수, 어떤 데이터를 표시할 것인지 
-UITableViewDelegate에는 행의 높이, Action등을 정할 수 있다.
 
-#### 2-2-1. UITableViewDataSource protocol
+#### 2.2.1 UITableViewDataSource 
+=> 필수 : numberOfRowsInSection, cellForRowAt 
+/ 이외에 numberOfSections, titleForHeaderInSection, canEditRowAt, canMoveRowAt 등이 있다.
 
-##### -> numberOfRowsInSection : 각 섹션에 표시할 행 갯수 설정 
-##### -> cellForRowAt : 특정 Cell에 대한 정보를 전달하여 Cell을 반환해주는 메서드 ( 셀을 구성할 데이터를 구성하고 해당 메서드에 전달하면, 구성한 cell이 TableView에 표시된다 )
 
-#### 2-2-2. UITableViewDelegate protocol
+<img width="1100" alt="스크린샷 2022-04-12 오후 11 42 58" src="https://user-images.githubusercontent.com/75043852/162988844-f5988b4e-1673-4550-ac76-f230353bb9f1.png">
 
-##### -> ViewController가 UITableViewDelegate 프로토콜을 준수하도록 extension을 달고 didSelectRowAt메서드를 구현하여, 셀 클릭 시에 할 일 완료여부가 바뀌도록 구현하였다.
+#### 2.2.2 UITableViewDelegate
+시각적인 부분, 액션 관리 등
+=> 모두 optional
+
+
+<img width="1100" alt="스크린샷 2022-04-12 오후 11 42 40" src="https://user-images.githubusercontent.com/75043852/162988861-b6f74702-3a4b-4e8d-9f44-e02741faa78f.png">
+
+
+#### 2.2.3. 본 프로젝트에서 사용한 메서드 
+
+> UITableViewDataSource protocol
+>> numberOfRowsInSection : 각 섹션에 표시할 행 갯수 설정 
+
+>> cellForRowAt : 특정 Cell에 대한 정보를 전달하여 Cell을 반환해주는 메서드 ( 셀을 구성할 데이터를 구성하고 해당 메서드에 전달하면, 구성한 cell이 TableView에 표시된다 )
+
+> UITableViewDelegate protocol
+>> ViewController가 UITableViewDelegate 프로토콜을 준수하도록 extension을 달고 didSelectRowAt메서드를 구현하여, 셀 클릭 시에 할 일 완료여부가 바뀌도록 구현하였다.
 
 ### 2-3. UserDefaults
 UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 쌍으로 지속적으로 저장하는 인터페이스이다. 런타임 시 개체를 사용하여 App이 사용자의 기본 데이터베이스에서 사용하는 기본값을 읽기 때문에 값이 필요할 때마다 데이터베이스를 열 필요가 없어진다.
