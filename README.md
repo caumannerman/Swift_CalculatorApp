@@ -10,7 +10,7 @@ RoundButton 클래스를 @IBDesignable, @IBInspectable annotation으로 작성�
 @IBAction함수, @IBOutlet 변수를 storyboard와 코드 상에서 연결하는 것이 핵심이었다.
 didset과 위의 두 annotation들은 버튼의 모양을 둥글게 만드는 데 사용하였다.
 
-### 1.1 프로퍼티 옵저버 
+> ### 1.1 프로퍼티 옵저버 
 swift가 제공하는 프로퍼티 옵저버에는 willSet, didSet 두가지가 있다.
 프로퍼티 옵저버는 property의 값 변화를 관찰하고 이에 응답한다.
 조건에 따라 연산 프로퍼티에 적용 가능하나, 기본적으로 저장 프로퍼티 (Stored Property)에 적용된다.
@@ -18,11 +18,11 @@ swift가 제공하는 프로퍼티 옵저버에는 willSet, didSet 두가지가 
 
 <img width="400" alt="스크린샷 2022-04-12 오후 10 49 28" src="https://user-images.githubusercontent.com/75043852/162977548-9438a3d7-dd6e-4bc1-996f-5456651807dc.png">
 
-### 1.2 @IBInspectable
+> ### 1.2 @IBInspectable
 annotation을 달아, 스토리보드에서 @IBInspectable이 달린 변수의 값을 변경할 수 있게 함. 즉 IB와 해당 변수가 연결되었다라는 것을 컴파일러에게 알리는 신호 @IBInspectable
 
 
-### 1.3 @IBDesignable
+> ### 1.3 @IBDesignable
 변경된 설정값을 스토리보드상에서 실시간으로 확인할 수 있도록 , 즉 런타임(시뮬레이터)이 아니라 컴파일타임에 확인할 수 있다.
 
 
@@ -34,7 +34,13 @@ annotation을 달아, 스토리보드에서 @IBInspectable이 달린 변수의 �
 </p>
 
 # 2. Swift_ToDo_List
-
+ 할 일 등록을 위해 UIAlertViewontroller와 UIAlertAction을 사용하여 할 일을 등록할 수 있도록하였다.
+ 등록된 할 일들을 표현하기 위해 UITableView와 Delegate, DataSource protocol을 사용하였고, 할 일들의 순서 변경, 삭제를 가능하게 프로토콜에 코드를 작성하였다.
+ 또한 할 일 구조체를 만들고 TableViewCell을 클릭 시, accessorytype을 바꾸어 완료된 할 일인지 아닌지 표시되도록 구현하였다. 이를 struct Tasks의 프로퍼티에 저장하였다.
+ 앱을 끄고 다시 켜게 되어도, 등록된 할 일들이 남아있도록 UserDefaults에 저장하였다.
+ tasks배열이 바뀌면 UserDefaluts에 저장된 것과 동일한 상태로 유지하기 위해, tasks에 didSet 프로퍼티 옵저버를 달아, save해주었다.
+ 또한 할 일 목록의 순서 변경 혹은 할 일 제거와 같은 경우에는 TableView에 표시된 내용과 tasks배열을 같은 상태로 유지해주는 것이 중요했다.
+ 
 <p>
 <img width="200" alt="스크린샷 2022-03-06 오전 3 13 17" src="https://user-images.githubusercontent.com/75043852/156895377-358c1164-4e6a-421d-9c2e-0fd99968b65d.png">
 <img width="200" alt="스크린샷 2022-03-06 오전 3 13 55" src="https://user-images.githubusercontent.com/75043852/156895381-c1e2a26e-60ee-42d1-ba16-9b0eef560791.png">
@@ -45,26 +51,29 @@ annotation을 달아, 스토리보드에서 @IBInspectable이 달린 변수의 �
 <img width="200" alt="스크린샷 2022-03-06 오전 3 14 51" src="https://user-images.githubusercontent.com/75043852/156895385-bf7ff2ed-7a34-42b4-ab10-18dfd5136458.png">
 </p>
 
-### 2.1 UIAlertController, UIAlertAction 
+> ### 2.1 UIAlertController, UIAlertAction 
 
-##### -> UIAlertController는 UIViewController프로토콜을 따르는 open class이다. 
+##### -> UIAlertController는 UIViewController프로토콜을 따르는 open class이다.  UIAlertController에 UIAlertAction을 addAction하여 등록함.
 ##### -> UIAlertAction은 title, style( .cancel, .default...), handler(클로저 형태)를 담아 생성하고, UIAlertController에 addAction하여 포함시켰다.
 ##### -> self.present로써 '+' 버튼이 클릭된 경우에 해당 alert가 화면에 표시되도록 하였다. 그 이후의 action은 각 UIAlertAction의 핸들러에 구현된 대로 처리된다.
 ##### ==> 여기서 Class Instance와 클로저 사이의 강한 순환참조로 인해 Reference count가 서로 절대 0이 되지 않아 메모리 누수가 생기는 것을 방지하기 위해 weak self 를 
 
-### 2.2 TableView
+![IMG_22B008D28433-1](https://user-images.githubusercontent.com/75043852/163108216-a92e855d-a638-435c-87de-9cfd5281d860.jpeg)
+
+
+> ### 2.2 TableView
 
 TableView는 섹션을 이용해 행을 그룹화하여 콘텐츠를 정렬하여 볼 수 있게 해준다. 
 이를 사용하기 위해서는 UITableViewDelegate, UITableViewDataSource 총 두가지 프로토콜을 구현해야한다.
 
-#### 2.2.1 UITableViewDataSource 
+>> #### 2.2.1 UITableViewDataSource 
 => 필수 : numberOfRowsInSection, cellForRowAt 
 / 이외에 numberOfSections, titleForHeaderInSection, canEditRowAt, canMoveRowAt 등이 있다.
 
 
 <img width="1100" alt="스크린샷 2022-04-12 오후 11 42 58" src="https://user-images.githubusercontent.com/75043852/162988844-f5988b4e-1673-4550-ac76-f230353bb9f1.png">
 
-#### 2.2.2 UITableViewDelegate
+>> #### 2.2.2 UITableViewDelegate
 시각적인 부분, 액션 관리 등
 => 모두 optional
 
@@ -72,21 +81,24 @@ TableView는 섹션을 이용해 행을 그룹화하여 콘텐츠를 정렬하�
 <img width="1100" alt="스크린샷 2022-04-12 오후 11 42 40" src="https://user-images.githubusercontent.com/75043852/162988861-b6f74702-3a4b-4e8d-9f44-e02741faa78f.png">
 
 
-#### 2.2.3. 본 프로젝트에서 사용한 메서드 
+>> #### 2.2.3. 본 프로젝트에서 사용한 메서드 
 
-> UITableViewDataSource protocol
->> numberOfRowsInSection : 각 섹션에 표시할 행 갯수 설정 
+* UITableViewDataSource protocol
+>>> numberOfRowsInSection : 각 섹션에 표시할 행 갯수 설정 
 
->> cellForRowAt : 특정 Cell에 대한 정보를 전달하여 Cell을 반환해주는 메서드 ( 셀을 구성할 데이터를 구성하고 해당 메서드에 전달하면, 구성한 cell이 TableView에 표시된다 )
+>>> cellForRowAt : 특정 Cell에 대한 정보를 전달하여 Cell을 반환해주는 메서드 ( 셀을 구성할 데이터를 구성하고 해당 메서드에 전달하면, 구성한 cell이 TableView에 표시된다 )
 
-> UITableViewDelegate protocol
->> ViewController가 UITableViewDelegate 프로토콜을 준수하도록 extension을 달고 didSelectRowAt메서드를 구현하여, 셀 클릭 시에 할 일 완료여부가 바뀌도록 구현하였다.
+* UITableViewDelegate protocol
+>>> ViewController가 UITableViewDelegate 프로토콜을 준수하도록 extension을 달고 didSelectRowAt메서드를 구현하여, 셀 클릭 시에 할 일 완료여부가 바뀌도록 구현하였다.
+>>> 또한 tableView.reloadRows()메서드를 사용하여 특정 셀들만 reload할 수 있게 하였다.
 
-### 2-3. UserDefaults
+> ### 2-3. UserDefaults
 UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 쌍으로 지속적으로 저장하는 인터페이스이다. 런타임 시 개체를 사용하여 App이 사용자의 기본 데이터베이스에서 사용하는 기본값을 읽기 때문에 값이 필요할 때마다 데이터베이스를 열 필요가 없어진다.
 사용자의 정보라던가 게시물의 대한 정보처럼 대용량의 데이터를 저장할 때 사용하지 않고 자동로그인 여부, 아이디 저장, 환경설정에서 설정하는 설정 데이터 값같은 단일데이터 등을 UserDefaults로 담아서 보관한다.
 
 이곳에 할 일 목록을 저장해, 앱이 종료되고 다시 시작되어도 데이터가 남아있도록 하였다.
+* UserDefaults.standard로 싱글톤 패턴으로 생성된 단 하나의 UserDefaults객체를 불러와 사용할 수 있고,
+* UserDefaults.object로 저장된 value를 key값을 입력하여 불러올 수 있다.
 
 # 3. CreditCardListApp (신용카드 추천 앱) using Firebase RealTime Database
 <p>
