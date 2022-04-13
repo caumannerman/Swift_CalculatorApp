@@ -34,6 +34,9 @@ annotation을 달아, 스토리보드에서 @IBInspectable이 달린 변수의 �
 </p>
 
 # 2. Swift_ToDo_List
+
+구동영상 : https://www.youtube.com/watch?v=vRdMyQ-p1bw
+
  할 일 등록을 위해 UIAlertViewontroller와 UIAlertAction을 사용하여 할 일을 등록할 수 있도록하였다.
  등록된 할 일들을 표현하기 위해 UITableView와 Delegate, DataSource protocol을 사용하였고, 할 일들의 순서 변경, 삭제를 가능하게 프로토콜에 코드를 작성하였다.
  또한 할 일 구조체를 만들고 TableViewCell을 클릭 시, accessorytype을 바꾸어 완료된 할 일인지 아닌지 표시되도록 구현하였다. 이를 struct Tasks의 프로퍼티에 저장하였다.
