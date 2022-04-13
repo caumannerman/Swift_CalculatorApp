@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     }
 // selector에 넘겨줘야하기 때문에 @objc를 붙여줘야함
     @objc func doneButtonTap(){
+        //수정 완료되었으므로, 다시 edit버튼으로 갈아끼움
         self.navigationItem.leftBarButtonItem = self.editButton
         self.tableView.setEditing(false, animated: true)
     }
@@ -96,9 +97,12 @@ class ViewController: UIViewController {
     func loadTasks() {
         //UserDefaults에 접근
         let userDefaults = UserDefaults.standard
+        //UserdDefaults에 저장된 것 불러오기 object  Dictionary의 배열 형태로 typeCasting해준다. Any인 이유는 Dictionary의 value값에 String, Bool이 섞여있기 때문!!
         guard let data = userDefaults.object(forKey: "tasks") as? [[String: Any]] else { return }
+        print(data)
         //배열형태로 가져오기
         self.tasks = data.compactMap {
+            //Optional Binding
             guard let title = $0["title"] as? String else { return nil }
             guard let done = $0["done"] as? Bool else { return nil }
             return Task(title: title, done: done)
