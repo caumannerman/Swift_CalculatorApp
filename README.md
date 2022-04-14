@@ -106,6 +106,8 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 
 # 3. Swift_Diary ( 일기장 앱) 
 
+> TabBarController - UIViewController를 상속받음
+> UICollectionView - UIScrollView를 상속받음 , 다양한 layout
 
 
 
