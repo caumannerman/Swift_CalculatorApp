@@ -74,6 +74,7 @@ class WriteDiaryViewController: UIViewController {
     @IBAction func tapConfirmButton(_ sender: UIBarButtonItem) {
         guard let title = self.titleTextField.text else { return }
         guard let contents = self.contentsTextView.text else { return }
+        //만약, 날짜를 선택한 것이 아니라 textField에 임의로 글자를 적었다면, diaryDate에 아무 값이 없을 것이기 때문에 return될 것이다!!
         guard let date = self.diaryDate else { return }
         let diary = Diary(title: title, contents: contents, date: date, isStar: false)
         self.delegate?.didSelectRegister(diary: diary)
