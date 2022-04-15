@@ -32,6 +32,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configureCollectionView()
         loadDiaryList()
+        NotificationCenter.default.addObserver(self, selector: #selector(editDiaryNotification(_:)), name: NSNotification.Name("editDiary"), object: nil)
+    }
+    
+    @objc func editDiaryNotification(_ notification: Notification) {
+        guard let diary = notification.object as? Diary else { return }
+        guard let row = notification.userInfo?["indexPath.row"] as? Int else { return }
+        self.diaryList[row] = diary
+        self.diaryList = self.diaryList.sorted(by: {
+            $0.date.compare($1.date) == .orderedDescending
+        })
+        self.collectionView.reloadData()
     }
     
     private func configureCollectionView() {
@@ -141,7 +152,7 @@ extension ViewController: DiaryDeltailViewDelegate{
     func didSelectDelete(indexPath: IndexPath) {
         //삭제되고, userDefaults에는 자동 동기화됨
         self.diaryList.remove(at: indexPath.row)
-        //List상태와 화면의 상태를 맞춰줘야하므로, 화면의 collectionView에서도 삭제해준다. 
+        //List상태와 화면의 상태를 맞춰줘야하므로, 화면의 collectionView에서도 삭제해준다.
         self.collectionView.deleteItems(at: [indexPath])
     }
 }

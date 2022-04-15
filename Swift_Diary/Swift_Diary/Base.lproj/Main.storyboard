@@ -128,7 +128,7 @@
         <!--일기 작성-->
         <scene sceneID="y3e-mD-Z01">
             <objects>
-                <viewController id="c4d-a9-XFv" customClass="WriteDiaryViewController" customModule="Swift_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteDiaryViewController" id="c4d-a9-XFv" customClass="WriteDiaryViewController" customModule="Swift_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sKx-tF-jTp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
