@@ -7,6 +7,16 @@
 
 import UIKit
 
+//일기장 상세 화면에서 삭제를 위한 protocol
+protocol DiaryDeltailViewDelegate: AnyObject{
+    func didSelectDelete(indexPath: IndexPath)
+}
+//일기장 작성 후 저장을 위한 protocol
+protocol WriteDiaryViewDelegate: AnyObject {
+    func didSelectRegister(diary: Diary)
+}
+
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -108,6 +118,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
         let diary = self.diaryList[indexPath.row]
         viewController.diary = diary
         viewController.indexPath = indexPath
+        //삭제를 위한 권한 위임
+        viewController.delegate = self
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -125,3 +137,11 @@ extension ViewController: WriteDiaryViewDelegate {
     }
 }
 
+extension ViewController: DiaryDeltailViewDelegate{
+    func didSelectDelete(indexPath: IndexPath) {
+        //삭제되고, userDefaults에는 자동 동기화됨
+        self.diaryList.remove(at: indexPath.row)
+        //List상태와 화면의 상태를 맞춰줘야하므로, 화면의 collectionView에서도 삭제해준다. 
+        self.collectionView.deleteItems(at: [indexPath])
+    }
+}

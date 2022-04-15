@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol WriteDiaryViewDelegate: AnyObject {
-    func didSelectRegister(diary: Diary)
-}
+
 
 
 class WriteDiaryViewController: UIViewController {

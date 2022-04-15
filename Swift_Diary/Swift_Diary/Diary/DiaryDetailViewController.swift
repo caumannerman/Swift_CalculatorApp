@@ -7,11 +7,13 @@
 
 import UIKit
 
+
 class DiaryDetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentsTextView: UITextView!
     @IBOutlet weak var dateLabel: UILabel!
+    weak var delegate: DiaryDeltailViewDelegate?
     
     
     var diary: Diary?
@@ -42,7 +44,11 @@ class DiaryDetailViewController: UIViewController {
         
     }
     @IBAction func tapDeleteButton(_ sender: UIButton) {
-        
+        //상세화면으로 올 때 넘겨받은 IndexPath
+        guard let indexPath = self.indexPath else { return }
+        //삭제하고 목록화면으로 돌아간다. 
+        self.delegate?.didSelectDelete(indexPath: indexPath)
+        self.navigationController?.popViewController(animated: true)
     }
     
     
