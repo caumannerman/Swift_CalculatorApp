@@ -13,21 +13,21 @@ class ViewController: UIViewController {
     private lazy var cityNameTextField: UITextField = {
        let textField = UITextField()
         textField.font = .systemFont(ofSize: 20.0, weight: .regular)
-        
-        textField.layer.borderWidth = 1.0
+        textField.layer.borderWidth = 2.0
+        textField.layer.cornerRadius = 12.0
         textField.layer.borderColor = UIColor.systemMint.cgColor
-        
+        textField.placeholder = "   도시이름을 입력하세요"
         
         return textField
     }()
     
     private lazy var getWeatherButton: UIButton = {
         let button = UIButton()
-        
-        button.setTitle("날씨 가져오기", for: .normal)
+        button.setTitle("  날씨 가져오기  ", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.layer.borderWidth = 2.0
         button.layer.borderColor = UIColor.black.cgColor
+        button.layer.cornerRadius = 8.0
         
         
         return button
@@ -35,8 +35,7 @@ class ViewController: UIViewController {
     
     private lazy var cityNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 25.0, weight: .medium)
-        label.backgroundColor = .blue
+        label.font = .systemFont(ofSize: 40.0, weight: .medium)
         label.textAlignment = .center
         
         return label
@@ -81,27 +80,34 @@ class ViewController: UIViewController {
         return stackView
     }()
     
-
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        
+        getWeatherButton.addTarget(self, action: #selector(tapGetWeatherButton), for: .touchUpInside)
+        setupSubView()
+      
     }
     
-    func setup(){
-        setupSubView()
-        cityNameLabel.text = "서울"
-        weatherLabel.text = "맑음"
-        temperatureLabel.text = "23^C"
-        maxTempLabel.text = "최고: 30C"
-        minTempLabel.text = "최저: 20C"
-        
-        getWeatherButton.addTarget(self, action: #selector(tapGetWeatherButton), for: .touchUpInside)
-        
+    //잘못된 도시이름 입력으로 400번대 error가 뜬 경우
+    func showAlert(){
+        let alert = UIAlertController(title: "ERROR", message: "잘못된 도시이름입니다.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true){
+            self.cityNameTextField.text = nil
+        }
     }
-
+    
+    // api로 받아온 후, 화면에 뿌리는 메서드
+    func configureView(weatherInformation: WeatherInformation){
+        self.cityNameLabel.text = weatherInformation.name
+        if let weather = weatherInformation.weather?.first{
+            self.weatherLabel.text = weather.description
+        }
+        self.temperatureLabel.text = "\(Int((weatherInformation.temp?.temp ?? 0) - 273.15))^C"
+        self.minTempLabel.text = "최저: \(Int((weatherInformation.temp?.minTemp ?? 0) - 273.15))^C"
+        self.maxTempLabel.text = "최고: \(Int((weatherInformation.temp?.maxTemp ?? 0) - 273.15))^C"
+    }
+    
+    // Get으로 받아오는 메서드
     func getWeather( cityName: String){
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=7eac24c87cf28d42dd38d4c25778708a") else { return }
         let session = URLSession(configuration: .default)
@@ -111,10 +117,41 @@ class ViewController: UIViewController {
                   let response = response as? HTTPURLResponse,
                   let weatherInformation = try? JSONDecoder().decode(WeatherInformation.self, from: data) else { return }
             debugPrint(weatherInformation)
+            
+            switch response.statusCode{
+            case(200...299):
+                debugPrint("GET 성공!! ")
+                //UI작업은 main 쓰레드에서!!!!!
+                DispatchQueue.main.async {
+                    //self.weatherStackView.isHidden = false
+                    self?.configureView(weatherInformation: weatherInformation)
+                }
+       
+            case(400...499):
+                debugPrint("""
+ERROR: Client ERROR \(response.statusCode)
+Response: \(response)
+""")
+                DispatchQueue.main.async{
+                    self?.showAlert()
+                }
+               
+            case(500...599):
+                debugPrint("""
+ERROR: Server ERROR \(response.statusCode)
+Response: \(response)
+""")
+            default:
+                debugPrint("""
+ERROR: ERROR \(response.statusCode)
+Response: \(response)
+""")
+            }
+            
         }.resume()
         
     }
-    //날씨 가져오기 버튼 클릭시 
+    //날씨 가져오기 버튼 클릭시 Get으로 받아오기
     @objc func tapGetWeatherButton(){
         if let cityName = self.cityNameTextField.text {
             self.getWeather(cityName: cityName)
@@ -122,6 +159,8 @@ class ViewController: UIViewController {
             self.view.endEditing(true)
         }
     }
+    
+    
 
 }
 
@@ -136,6 +175,8 @@ extension ViewController {
         cityNameTextField.snp.makeConstraints{
             $0.leading.trailing.equalToSuperview().inset(24.0)
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(30.0)
+            $0.height.equalTo(50.0)
+            $0.leftMargin.equalTo(10.0)
         }
         
         getWeatherButton.snp.makeConstraints{
@@ -169,3 +210,5 @@ extension ViewController {
         self.view.endEditing(true)
     }
 }
+
+
