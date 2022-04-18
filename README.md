@@ -116,9 +116,47 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 
 # 5. 날씨 앱
 
-http통신 Using URLSession   
--요청과 응답으로 구성 
+>> 이 앱에서는 URLSession을 사용하여 http통신을 진행하였고, OpenWeatherAPI를 사용하여 날씨 정보를 GET 하였다.
+
+
+> http 통신
+- 요청과 응답으로 구성 
 - http통신은 응답이 끝나면 연결이 끊긴다 (계속  연결되어있지 않다.)
+![IMG_817B24AA2AE5-1](https://user-images.githubusercontent.com/75043852/163804785-6654742e-c4f5-4964-80d0-487ee83fef23.jpeg)
+![IMG_0C3C9B6A0067-1](https://user-images.githubusercontent.com/75043852/163804789-f5fba434-a5c0-4c3d-9bf9-f677ea6823bf.jpeg)
+
+
+
+> URLSession
+
+- 1. URLSession은 URLSessionconfiguration으로 생성할 수 있다.
+- 1. 이렇게 생성된 URLSession을 통해 1개 이상의 URLSessionTask를 만들 수 있다.
+
+> URLSession의 종류
+
+>> - 1. 공유세션(Shared Session) URLSession.shared()
+>>> 싱글톤으로 사용가능 
+>>> 맞춤설정을 할 수는 없지만 간편하게 사용
+
+>> - 2. 기본세션(Default Session) URLSession(configuration: .default)
+>>> 공유세션과 유사 / 원하는 설정 가능 
+>>> 캐시,쿠키인증 등 disk에 저장
+>>> 순차적으로 처리하기 위해 delegate 지정 가능
+
+>> - 3. 임시세션(Ephemeral Session) URLSession(configuration: .ephemeral)
+>>> Default Session과 유사하나, 캐시/쿠키/사용자 인증정보를 저장하지 않음
+>>> Memory에 올려서 연결, 세션 만료시 삭제됨 
+
+>> - 4. 백그라운드세션(Background Session) URLSession(configuration: .background)
+>>> 앱이 실행되지 않는 동안 백그라운드에서 통신 가능 
+
+
+
+> URLSessionTask 종류
+![IMG_91BB11F21915-1](https://user-images.githubusercontent.com/75043852/163806192-25f61dd2-e56a-4861-8dbc-093a51c0ac57.jpeg)
+
+> URLSession의 Life Cycle
+![IMG_D858B813A792-1](https://user-images.githubusercontent.com/75043852/163806515-4867c438-059a-4c8e-bc48-68db10252bfd.jpeg)
 
 
 # 4. CreditCardListApp (신용카드 추천 앱) using Firebase RealTime Database
