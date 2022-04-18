@@ -13,6 +13,7 @@
 		A575CAE2280D9A2700500458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A575CAE1280D9A2700500458 /* Assets.xcassets */; };
 		A575CAE5280D9A2700500458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A575CAE3280D9A2700500458 /* LaunchScreen.storyboard */; };
 		A575CAEE280D9C7600500458 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A575CAED280D9C7600500458 /* SnapKit */; };
+		A575CAF0280DAA5100500458 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575CAEF280DAA5100500458 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		A575CAE1280D9A2700500458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A575CAE4280D9A2700500458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A575CAE6280D9A2700500458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A575CAEF280DAA5100500458 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				A575CAE1280D9A2700500458 /* Assets.xcassets */,
 				A575CAE3280D9A2700500458 /* LaunchScreen.storyboard */,
 				A575CAE6280D9A2700500458 /* Info.plist */,
+				A575CAEF280DAA5100500458 /* Weather.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A575CAF0280DAA5100500458 /* Weather.swift in Sources */,
 				A575CADD280D9A2500500458 /* ViewController.swift in Sources */,
 				A575CAD9280D9A2500500458 /* AppDelegate.swift in Sources */,
 				A575CADB280D9A2500500458 /* SceneDelegate.swift in Sources */,
