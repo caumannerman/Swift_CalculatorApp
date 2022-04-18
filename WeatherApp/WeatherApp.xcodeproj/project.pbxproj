@@ -10,9 +10,9 @@
 		A575CAD9280D9A2500500458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575CAD8280D9A2500500458 /* AppDelegate.swift */; };
 		A575CADB280D9A2500500458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575CADA280D9A2500500458 /* SceneDelegate.swift */; };
 		A575CADD280D9A2500500458 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575CADC280D9A2500500458 /* ViewController.swift */; };
-		A575CAE0280D9A2500500458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A575CADE280D9A2500500458 /* Main.storyboard */; };
 		A575CAE2280D9A2700500458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A575CAE1280D9A2700500458 /* Assets.xcassets */; };
 		A575CAE5280D9A2700500458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A575CAE3280D9A2700500458 /* LaunchScreen.storyboard */; };
+		A575CAEE280D9C7600500458 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A575CAED280D9C7600500458 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,6 @@
 		A575CAD8280D9A2500500458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A575CADA280D9A2500500458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A575CADC280D9A2500500458 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A575CADF280D9A2500500458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A575CAE1280D9A2700500458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A575CAE4280D9A2700500458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A575CAE6280D9A2700500458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A575CAEE280D9C7600500458 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,6 @@
 				A575CAD8280D9A2500500458 /* AppDelegate.swift */,
 				A575CADA280D9A2500500458 /* SceneDelegate.swift */,
 				A575CADC280D9A2500500458 /* ViewController.swift */,
-				A575CADE280D9A2500500458 /* Main.storyboard */,
 				A575CAE1280D9A2700500458 /* Assets.xcassets */,
 				A575CAE3280D9A2700500458 /* LaunchScreen.storyboard */,
 				A575CAE6280D9A2700500458 /* Info.plist */,
@@ -83,6 +82,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				A575CAED280D9C7600500458 /* SnapKit */,
+			);
 			productName = WeatherApp;
 			productReference = A575CAD5280D9A2500500458 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +113,9 @@
 				Base,
 			);
 			mainGroup = A575CACC280D9A2500500458;
+			packageReferences = (
+				A575CAEC280D9C7500500458 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A575CAD6280D9A2500500458 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +132,6 @@
 			files = (
 				A575CAE5280D9A2700500458 /* LaunchScreen.storyboard in Resources */,
 				A575CAE2280D9A2700500458 /* Assets.xcassets in Resources */,
-				A575CAE0280D9A2500500458 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +151,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A575CADE280D9A2500500458 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A575CADF280D9A2500500458 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A575CAE3280D9A2700500458 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +288,6 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +315,6 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A575CAEC280D9C7500500458 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A575CAED280D9C7600500458 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A575CAEC280D9C7500500458 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A575CACD280D9A2500500458 /* Project object */;
 }
