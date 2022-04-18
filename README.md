@@ -111,7 +111,14 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 
 
 
+# 4. Pomodoro 타이머 앱 
 
+
+# 5. 날씨 앱
+
+http통신 Using URLSession   
+-요청과 응답으로 구성 
+- http통신은 응답이 끝나면 연결이 끊긴다 (계속  연결되어있지 않다.)
 
 
 # 4. CreditCardListApp (신용카드 추천 앱) using Firebase RealTime Database
