@@ -42,11 +42,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="143" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                        <connections>
+                                            <action selector="tapCancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfc-md-am3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tiz-fb-wTT">
                                         <rect key="frame" x="223" y="0.0" width="143" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="시작"/>
+                                        <connections>
+                                            <action selector="tapStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yoq-d8-slv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -70,6 +76,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="en8-xW-ao9" secondAttribute="trailing" constant="48" id="zqK-pJ-qv2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="jEx-LP-B1x" id="K28-uo-rug"/>
+                        <outlet property="datePicker" destination="ltC-eQ-t55" id="TPD-TS-pcn"/>
+                        <outlet property="progressView" destination="en8-xW-ao9" id="cZg-Ru-a8r"/>
+                        <outlet property="startButton" destination="Tiz-fb-wTT" id="80F-JX-tsk"/>
+                        <outlet property="timerLabel" destination="U5R-20-xxe" id="Oea-IR-jyk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
