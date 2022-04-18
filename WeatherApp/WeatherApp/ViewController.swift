@@ -10,7 +10,7 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    private lazy var textField: UITextField = {
+    private lazy var cityNameTextField: UITextField = {
        let textField = UITextField()
         textField.font = .systemFont(ofSize: 20.0, weight: .regular)
         
@@ -98,27 +98,49 @@ class ViewController: UIViewController {
         maxTempLabel.text = "최고: 30C"
         minTempLabel.text = "최저: 20C"
         
+        getWeatherButton.addTarget(self, action: #selector(tapGetWeatherButton), for: .touchUpInside)
+        
     }
 
+    func getWeather( cityName: String){
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=7eac24c87cf28d42dd38d4c25778708a") else { return }
+        let session = URLSession(configuration: .default)
+        session.dataTask(with: url){ [weak self] data, response, error in
+            guard error == nil,
+                  let data = data,
+                  let response = response as? HTTPURLResponse,
+                  let weatherInformation = try? JSONDecoder().decode(WeatherInformation.self, from: data) else { return }
+            debugPrint(weatherInformation)
+        }.resume()
+        
+    }
+    //날씨 가져오기 버튼 클릭시 
+    @objc func tapGetWeatherButton(){
+        if let cityName = self.cityNameTextField.text {
+            self.getWeather(cityName: cityName)
+            //키보드 내리기
+            self.view.endEditing(true)
+        }
+    }
 
 }
 
 
 
-private extension ViewController {
-    func setupSubView(){
-        [ textField, getWeatherButton, cityNameLabel, weatherLabel, temperatureLabel, minMaxTempstackView].forEach{
+extension ViewController {
+    private func setupSubView(){
+        [ cityNameTextField, getWeatherButton, cityNameLabel, weatherLabel, temperatureLabel, minMaxTempstackView].forEach{
             view.addSubview($0)
         }
         
-        textField.snp.makeConstraints{
+        cityNameTextField.snp.makeConstraints{
             $0.leading.trailing.equalToSuperview().inset(24.0)
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(30.0)
         }
         
         getWeatherButton.snp.makeConstraints{
-            $0.top.equalTo(textField.snp.bottom).offset(24.0)
-            $0.centerX.equalTo(textField.snp.centerX)
+            $0.top.equalTo(cityNameTextField.snp.bottom).offset(24.0)
+            $0.centerX.equalTo(cityNameTextField.snp.centerX)
            
         }
         
@@ -141,7 +163,9 @@ private extension ViewController {
             $0.centerX.equalTo(cityNameLabel.snp.centerX)
             $0.top.equalTo(temperatureLabel.snp.bottom).offset(6.0)
         }
-        
-        
+    }
+    //빈화면 touch시, 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
