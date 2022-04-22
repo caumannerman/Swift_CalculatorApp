@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  AppStore
+//  COVID19BoardApp
 //
-//  Created by 양준식 on 2022/04/01.
+//  Created by 양준식 on 2022/04/22.
 //
 
 import UIKit
