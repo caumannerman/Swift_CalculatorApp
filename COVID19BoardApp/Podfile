@@ -8,5 +8,5 @@ target 'COVID19BoardApp' do
   # Pods for COVID19BoardApp
 pod 'Alamofire'
 pod 'Charts'
-
+pod 'SnapKit', '~> 5.6.0'
 end

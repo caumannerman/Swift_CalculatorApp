@@ -10,9 +10,10 @@
 		A533F0B128129EC1004D80F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F0B028129EC1004D80F9 /* AppDelegate.swift */; };
 		A533F0B328129EC1004D80F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F0B228129EC1004D80F9 /* SceneDelegate.swift */; };
 		A533F0B528129EC1004D80F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F0B428129EC1004D80F9 /* ViewController.swift */; };
-		A533F0B828129EC1004D80F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533F0B628129EC1004D80F9 /* Main.storyboard */; };
 		A533F0BA28129EC4004D80F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A533F0B928129EC4004D80F9 /* Assets.xcassets */; };
 		A533F0BD28129EC4004D80F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533F0BB28129EC4004D80F9 /* LaunchScreen.storyboard */; };
+		A533F0C52812EBC1004D80F9 /* CovidDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F0C42812EBC1004D80F9 /* CovidDetailTableViewController.swift */; };
+		A533F0C72812EF7E004D80F9 /* CovidDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F0C62812EF7E004D80F9 /* CovidDetailTableViewCell.swift */; };
 		A746E0CD5A52FDD662CBD62A /* Pods_COVID19BoardApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618B7742C2ED499E78306257 /* Pods_COVID19BoardApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,10 +23,11 @@
 		A533F0B028129EC1004D80F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A533F0B228129EC1004D80F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A533F0B428129EC1004D80F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A533F0B728129EC1004D80F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A533F0B928129EC4004D80F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A533F0BC28129EC4004D80F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A533F0BE28129EC4004D80F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A533F0C42812EBC1004D80F9 /* CovidDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDetailTableViewController.swift; sourceTree = "<group>"; };
+		A533F0C62812EF7E004D80F9 /* CovidDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDetailTableViewCell.swift; sourceTree = "<group>"; };
 		BF85B7565C38F75DC652F2E2 /* Pods-COVID19BoardApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID19BoardApp.debug.xcconfig"; path = "Target Support Files/Pods-COVID19BoardApp/Pods-COVID19BoardApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BFC393EC6CCD32E0E52C4C75 /* Pods-COVID19BoardApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID19BoardApp.release.xcconfig"; path = "Target Support Files/Pods-COVID19BoardApp/Pods-COVID19BoardApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +58,6 @@
 				BF85B7565C38F75DC652F2E2 /* Pods-COVID19BoardApp.debug.xcconfig */,
 				BFC393EC6CCD32E0E52C4C75 /* Pods-COVID19BoardApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,10 +85,11 @@
 				A533F0B028129EC1004D80F9 /* AppDelegate.swift */,
 				A533F0B228129EC1004D80F9 /* SceneDelegate.swift */,
 				A533F0B428129EC1004D80F9 /* ViewController.swift */,
-				A533F0B628129EC1004D80F9 /* Main.storyboard */,
 				A533F0B928129EC4004D80F9 /* Assets.xcassets */,
 				A533F0BB28129EC4004D80F9 /* LaunchScreen.storyboard */,
 				A533F0BE28129EC4004D80F9 /* Info.plist */,
+				A533F0C42812EBC1004D80F9 /* CovidDetailTableViewController.swift */,
+				A533F0C62812EF7E004D80F9 /* CovidDetailTableViewCell.swift */,
 			);
 			path = COVID19BoardApp;
 			sourceTree = "<group>";
@@ -154,7 +156,6 @@
 			files = (
 				A533F0BD28129EC4004D80F9 /* LaunchScreen.storyboard in Resources */,
 				A533F0BA28129EC4004D80F9 /* Assets.xcassets in Resources */,
-				A533F0B828129EC1004D80F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +210,8 @@
 			files = (
 				A533F0B528129EC1004D80F9 /* ViewController.swift in Sources */,
 				A533F0B128129EC1004D80F9 /* AppDelegate.swift in Sources */,
+				A533F0C52812EBC1004D80F9 /* CovidDetailTableViewController.swift in Sources */,
+				A533F0C72812EF7E004D80F9 /* CovidDetailTableViewCell.swift in Sources */,
 				A533F0B328129EC1004D80F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,14 +219,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A533F0B628129EC1004D80F9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A533F0B728129EC1004D80F9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A533F0BB28129EC4004D80F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,7 +357,6 @@
 				INFOPLIST_FILE = COVID19BoardApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -391,7 +385,6 @@
 				INFOPLIST_FILE = COVID19BoardApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
