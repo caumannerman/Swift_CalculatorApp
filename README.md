@@ -112,6 +112,8 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 
 
 # 4. Pomodoro 타이머 앱 
+
+구동영상: https://www.youtube.com/watch?v=Tw7JH1ln1ZA
 - 1. enum 타입으로 TimerStatus를 start, pause, end 세가지로 정의하여, 상태에 따른 버튼 변화, 타이머 실행등을 수행하였다.
 - 1. datePicker에서 시간 설정 후, "시작" 버튼을 누르면 실행되는 tapStartButton(), "취소"버튼을 누르면 실행되는 tapCancelButton(), 크게 두 함수로만 이루어진 간단한 앱
 - 1. datePicker와 progressView& 남은 시간을 나타내주는 Label을 겹쳐서 배치하고, 상황에 따라 alpha = 1 혹은 0으로 서로 바꾸며 animation효과 적용
