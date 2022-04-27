@@ -112,7 +112,36 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 
 
 # 4. Pomodoro 타이머 앱 
+- 1. enum 타입으로 TimerStatus를 start, pause, end 세가지로 정의하여, 상태에 따른 버튼 변화, 타이머 실행등을 수행하였다.
+- 1. datePicker에서 시간 설정 후, "시작" 버튼을 누르면 실행되는 tapStartButton(), "취소"버튼을 누르면 실행되는 tapCancelButton(), 크게 두 함수로만 이루어진 간단한 앱
+- 1. datePicker와 progressView& 남은 시간을 나타내주는 Label을 겹쳐서 배치하고, 상황에 따라 alpha = 1 혹은 0으로 서로 바꾸며 animation효과 적용
 
+
+
+<p>
+<img width="220" alt="스크린샷 2022-04-27 오전 10 45 01" src="https://user-images.githubusercontent.com/75043852/165421780-6b039e5f-e67d-4634-bfab-71d19602ffe7.png">
+<img width="220" alt="스크린샷 2022-04-27 오전 10 45 15" src="https://user-images.githubusercontent.com/75043852/165421790-afbcf1a1-51dc-4bb6-8d80-2e2f492b23ff.png">
+<img width="220" alt="스크린샷 2022-04-27 오전 10 45 52" src="https://user-images.githubusercontent.com/75043852/165421796-6f1d6838-4d36-401c-9a95-8c6f4808f983.png">
+</p>
+
+## 4.1 DatePicker 
+- 1. preferred Style = Wheels, Mode = CountDownTimer로 설정하여 시간 선택, countdown 수행 
+- 1. datePicker.countDownDuration으로 설정한 시간을 "초" 단위로 가져와 사용하였다. 
+
+## 4.2 DispatchSourceTimer
+- 1. DispatchSource.makeTimerSource(flags:[], queue: .main)으로 설정해주어 Timer가 돌아가며 view를 업데이트할 수 있게 하였다.
+- 1. DispatchSource.schedule( deadline: .now(), repeating: 1)로 즉시 실행하며, 1초마다 handler 클로저 내의 코드가 실행되도록 하였다.
+- 1. handler 내부에 guard let self = self else { return }으로 일시적으로 strong reference가 되도록 하였다.
+- 1. DispatchSource.setEventHandler의 handler 내부에서 남은시간을 저장하고있는 변수를 갱신하고, timeLabel에 남은 시간을 update하여 표시하고 progressView를 갱신하며,
+남은 시간이 0이 되었을 때는 timer 를 정지시켰다.
+- 1. DispatchSourceTimer를 정지시킬 때, 타이머가 pause되어있던 상태일 때는, 공식문서의 설명에 따라 resume() 후에 DispatchSourceTimer.cancel()하고, 메모리 누수를 방지하기 위해 self.timer = nil로 메모리 해제를 하였다.
+
+## 4.3 tapStartButton()
+- 1. viewController에 정의했고, 변수로 갖고있는 timerStatus값 ( .end, .start, .pause)에 따라 시작/일시정지/재시작이 되도록 구현
+( DispatchSourceTimer.suspend(), DispatchSourceTimer.resume() )
+
+## 4.4 tapCancelButton()
+- 1. timer가 pause()되어있는 상태라면 resume()해준 후, timer.cancel() & self.timer = nil 하여 timer를 정지, 메모리 할당해제시켜주었다.
 
 # 5. 날씨 앱
 
