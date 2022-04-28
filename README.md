@@ -149,16 +149,13 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 
 >> 이 앱에서는 URLSession을 사용하여 http통신을 진행하였고, OpenWeatherAPI를 사용하여 날씨 정보를 GET 하였다.
 
-
 > http 통신
 - 요청과 응답으로 구성 
 - http통신은 응답이 끝나면 연결이 끊긴다 (계속  연결되어있지 않다.)
-![IMG_817B24AA2AE5-1](https://user-images.githubusercontent.com/75043852/163804785-6654742e-c4f5-4964-80d0-487ee83fef23.jpeg)
-![IMG_0C3C9B6A0067-1](https://user-images.githubusercontent.com/75043852/163804789-f5fba434-a5c0-4c3d-9bf9-f677ea6823bf.jpeg)
+<img width="500" alt="스크린샷 2022-04-29 오전 1 53 15" src="https://user-images.githubusercontent.com/75043852/165804523-d79b6445-6230-493b-8cc1-e21d553f1a53.png">
+<img width="500" alt="스크린샷 2022-04-29 오전 1 53 23" src="https://user-images.githubusercontent.com/75043852/165804538-475d4a6d-0b58-43f4-b69f-7fdd026e621a.png">
 
-
-
-> URLSession
+## 5.1 URLSession
 
 - 1. URLSession은 URLSessionconfiguration으로 생성할 수 있다.
 - 1. 이렇게 생성된 URLSession을 통해 1개 이상의 URLSessionTask를 만들 수 있다.
@@ -181,11 +178,10 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 >> - 4. 백그라운드세션(Background Session) URLSession(configuration: .background)
 >>> 앱이 실행되지 않는 동안 백그라운드에서 통신 가능 
 
-
-
 > URLSessionTask 종류
-![IMG_91BB11F21915-1](https://user-images.githubusercontent.com/75043852/163806192-25f61dd2-e56a-4861-8dbc-093a51c0ac57.jpeg)
+<img width="500" alt="스크린샷 2022-04-29 오전 1 54 48" src="https://user-images.githubusercontent.com/75043852/165804737-c89e3143-683b-4620-a9e2-b8ff2ba4d4e1.png">
 
 > URLSession의 Life Cycle
-![IMG_D858B813A792-1](https://user-images.githubusercontent.com/75043852/163806515-4867c438-059a-4c8e-bc48-68db10252bfd.jpeg)
+<img width="500" alt="스크린샷 2022-04-29 오전 1 54 58" src="https://user-images.githubusercontent.com/75043852/165804755-334bdf99-6f6e-42ae-b5de-c83758ce37e3.png">
 
+## 5.2 
