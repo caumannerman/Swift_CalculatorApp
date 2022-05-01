@@ -170,14 +170,6 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 # 5. 날씨 앱
 
 >> 이 앱에서는 URLSession을 사용하여 http통신을 진행하였고, OpenWeatherAPI를 사용하여 날씨 정보를 GET 하였다.
-<img width="400" alt="스크린샷 2022-05-01 오후 9 15 06" src="https://user-images.githubusercontent.com/75043852/166145420-cb81fc2a-69c6-4767-97b8-1e5d2205a8b5.png">
->> OpenWeatherAPI에서 받아올 수 있는 json 구조에 맞게 Weather구조체를 만들고, URLSession을 default Session형태로 사용하여 통신
-
-<p>
-<img width="200" alt="스크린샷 2022-05-01 오후 9 39 43" src="https://user-images.githubusercontent.com/75043852/166146447-882de72c-7b3d-41c5-a522-ff6de07cd6ec.png">
-<img width="200" alt="스크린샷 2022-05-01 오후 9 39 57" src="https://user-images.githubusercontent.com/75043852/166146451-d32ad9dd-f9f7-4d91-870e-ca74302700b9.png">
-<img width="200" alt="스크린샷 2022-05-01 오후 9 40 09" src="https://user-images.githubusercontent.com/75043852/166146452-2c865912-3751-4949-933a-e4cd2184e2ef.png">
-</p>
 
 > http 통신
 - 요청과 응답으로 구성 
@@ -188,7 +180,6 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 ## 5.1 URLSession
 
 - 1. URLSession은 URLSessionconfiguration으로 생성할 수 있다.
-<img width="300" alt="스크린샷 2022-05-01 오후 9 17 30" src="https://user-images.githubusercontent.com/75043852/166145495-5ae8d6e6-9d22-4ba2-a5de-1bd280a4981a.png">
 - 1. 이렇게 생성된 URLSession을 통해 1개 이상의 URLSessionTask를 만들 수 있다.
 
 > URLSession의 종류
@@ -214,3 +205,5 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 
 > URLSession의 Life Cycle
 <img width="500" alt="스크린샷 2022-04-29 오전 1 54 58" src="https://user-images.githubusercontent.com/75043852/165804755-334bdf99-6f6e-42ae-b5de-c83758ce37e3.png">
+
+## 5.2 
