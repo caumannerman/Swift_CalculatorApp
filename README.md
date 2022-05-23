@@ -104,7 +104,8 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 * UserDefaults.object로 저장된 value를 key값을 입력하여 불러올 수 있다.
 
 
-# 3. Swift_Diary ( 일기장 앱) -> Swift_Diary는 storyboard사용, Swift_DiaryApp은 storyboard없이 코드로만 구현한 프로젝트이다. UI, 기능은 동일하다
+# 3. Swift_Diary ( 일기장 앱) 
+-> Swift_Diary는 storyboard사용, Swift_DiaryApp은 storyboard없이 코드로만 구현한 프로젝트이다. UI, 기능은 동일하다
 
 구동영상: 
 
