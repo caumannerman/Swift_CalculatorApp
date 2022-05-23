@@ -106,8 +106,30 @@ UserDefaults는 App 시작시 사용자의 기본 데이터베이스를 키-값 
 
 # 3. Swift_Diary ( 일기장 앱) 
 
-> TabBarController - UIViewController를 상속받음
-> UICollectionView - UIScrollView를 상속받음 , 다양한 layout
+구동영상: 
+
+<p>
+<img width="250" alt="스크린샷 2022-05-23 오후 5 52 59" src="https://user-images.githubusercontent.com/75043852/169782393-0004a9a7-9c32-430c-a2cf-0ec46090579f.png">
+<img width="250" alt="스크린샷 2022-05-23 오후 5 53 31" src="https://user-images.githubusercontent.com/75043852/169782399-591b1f98-1a66-4eb6-bed8-b9dfb0156435.png">
+<img width="250" alt="스크린샷 2022-05-23 오후 5 53 56" src="https://user-images.githubusercontent.com/75043852/169782416-667e4704-20fb-4312-8ef2-79e501699845.png">
+<img width="250" alt="스크린샷 2022-05-23 오후 5 54 11" src="https://user-images.githubusercontent.com/75043852/169782433-9a5b3ea2-bd04-467d-a888-7ea3602cf94c.png">
+<img width="250" alt="스크린샷 2022-05-23 오후 5 54 30" src="https://user-images.githubusercontent.com/75043852/169782439-a80fd3d6-da58-4429-8b62-1330f4eb37a4.png">
+<img width="250" alt="스크린샷 2022-05-23 오후 5 54 46" src="https://user-images.githubusercontent.com/75043852/169782448-cff647a1-83c3-4a41-9eb7-512a87f2005e.png">
+</p>
+
+
+
+>  UIViewController를 상속받은 TabBarController와 그 프로퍼티인 viewControllers에 두 개의 navigation Controller를 embedded하여 구성
+> UICollectionView는 UIScrollView를 상속받음 , 다양한 layout 표현 가능
+
+## 프로젝트 Point!
+
+> - 1. DiaryViewController(일기장 목록 페이지)에서 Diary를 저장하는 diaryList: [Diary] 배열에 Property Observer ( didset )을 달았다!
+>>  Diary에 삭제 혹은 추가, 수정이 일어날 경우 UserDefaults와 알아서 동기화!
+> - 2. 동일한 Diary가 다수의 collectionView에서 서로 다른 위치에 존재하므로, 수정, 삭제를 용이하게 하기 위해 uuid사용 
+> - 3. 날짜 입력을 위한 UITextField의 inputView를 dataPicker로 설정하고 인위적으로 .editingChanged 이벤트를 방생시켜 TextField의 내용 변경
+> - 4. *** NotificationCenter.default를 사용하여 event 등록, post하여 이벤트를 방생시켜 1:n viewController 이벤트를 처리하였다!! ***
+
 
 
 
