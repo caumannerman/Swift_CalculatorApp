@@ -37,14 +37,14 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.font = .systemFont(ofSize: 40.0, weight: .medium)
         label.textAlignment = .center
-        
+        label.text = "도시별 날씨"
         return label
     }()
     
     private lazy var weatherLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20.0, weight: .regular)
-        
+       
         return label
     }()
 
@@ -102,13 +102,14 @@ class ViewController: UIViewController {
         if let weather = weatherInformation.weather?.first{
             self.weatherLabel.text = weather.description
         }
+        //화씨를 섭씨로 변경
         self.temperatureLabel.text = "\(Int((weatherInformation.temp?.temp ?? 0) - 273.15))^C"
         self.minTempLabel.text = "최저: \(Int((weatherInformation.temp?.minTemp ?? 0) - 273.15))^C"
         self.maxTempLabel.text = "최고: \(Int((weatherInformation.temp?.maxTemp ?? 0) - 273.15))^C"
     }
     
     // Get으로 받아오는 메서드
-    func getWeather( cityName: String){
+    func getWeather(cityName: String){
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=7eac24c87cf28d42dd38d4c25778708a") else { return }
         let session = URLSession(configuration: .default)
         session.dataTask(with: url){ [weak self] data, response, error in

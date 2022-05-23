@@ -1,0 +1,6 @@
+framework module Pods_RemoteNotificationSampleApp {
+  umbrella header "Pods-RemoteNotificationSampleApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

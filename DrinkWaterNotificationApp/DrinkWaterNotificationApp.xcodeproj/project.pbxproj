@@ -17,6 +17,7 @@
 		A5626B5327F4215000910F45 /* AlertListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5626B5127F4215000910F45 /* AlertListCell.xib */; };
 		A5626B5527F424FB00910F45 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5626B5427F424FB00910F45 /* Alert.swift */; };
 		A5626B5727F42ACC00910F45 /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5626B5627F42ACC00910F45 /* AddAlertViewController.swift */; };
+		A5B2928E27F4834D00882C50 /* UNNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2928D27F4834D00882C50 /* UNNotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A5626B5127F4215000910F45 /* AlertListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertListCell.xib; sourceTree = "<group>"; };
 		A5626B5427F424FB00910F45 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A5626B5627F42ACC00910F45 /* AddAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
+		A5B2928D27F4834D00882C50 /* UNNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				A5626B5027F4215000910F45 /* AlertListCell.swift */,
 				A5626B5127F4215000910F45 /* AlertListCell.xib */,
 				A5626B5427F424FB00910F45 /* Alert.swift */,
+				A5B2928D27F4834D00882C50 /* UNNotificationCenter.swift */,
 			);
 			path = DrinkWaterNotificationApp;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				A5626B5227F4215000910F45 /* AlertListCell.swift in Sources */,
 				A5626B5527F424FB00910F45 /* Alert.swift in Sources */,
 				A5626B4F27F41F3F00910F45 /* AlertListViewController.swift in Sources */,
+				A5B2928E27F4834D00882C50 /* UNNotificationCenter.swift in Sources */,
 				A5626B5727F42ACC00910F45 /* AddAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

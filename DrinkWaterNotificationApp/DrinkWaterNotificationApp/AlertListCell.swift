@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import UserNotifications
 
 class AlertListCell: UITableViewCell {
+    
+    let userNotificationCenter = UNUserNotificationCenter.current()
 
     @IBOutlet weak var meridiemLabel: UILabel!
     
@@ -33,5 +36,11 @@ class AlertListCell: UITableViewCell {
         //변경된 switch값으로 바꿈
         alerts[sender.tag].isOn = sender.isOn
         UserDefaults.standard.set(try? PropertyListEncoder().encode(alerts), forKey: "alerts")
+        
+        if sender.isOn{
+            userNotificationCenter.addNotificationRequest(by: alerts[sender.tag])
+        }else {
+            userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [alerts[sender.tag].id])
+        }
     }
 }

@@ -9,8 +9,8 @@ import UIKit
 
 class StarViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var collectionView: UICollectionView!
     // 즐겨찾기 된 다이어리 리스트
     private var diaryList = [Diary]()
     
