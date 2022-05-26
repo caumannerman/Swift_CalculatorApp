@@ -344,7 +344,6 @@
         <!--Star View Controller-->
         <scene sceneID="b8V-wi-MJd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q5a-fg-T6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="GbQ-wt-3ez" customClass="StarViewController" customModule="Swift_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U7i-Ys-49t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -407,6 +406,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="MAC-Mu-RHW"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q5a-fg-T6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="429" y="607"/>
         </scene>

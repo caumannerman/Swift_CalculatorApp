@@ -14,6 +14,12 @@
 		A5A03F64283B912C0005E41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A03F62283B912C0005E41E /* LaunchScreen.storyboard */; };
 		A5A03F6D283B92FB0005E41E /* StarDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A03F6C283B92FB0005E41E /* StarDiaryViewController.swift */; };
 		A5A03F6F283B930B0005E41E /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A03F6E283B930B0005E41E /* DiaryViewController.swift */; };
+		A5A03F72283BA5100005E41E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A5A03F71283BA5100005E41E /* SnapKit */; };
+		A5A03F75283BA5FB0005E41E /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A03F74283BA5FB0005E41E /* Diary.swift */; };
+		A5A03F77283BA9260005E41E /* DiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A03F76283BA9260005E41E /* DiaryCollectionViewCell.swift */; };
+		A5A03F79283BB4B10005E41E /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A03F78283BB4B10005E41E /* DiaryDetailViewController.swift */; };
+		A5A03F7B283BB68F0005E41E /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A03F7A283BB68F0005E41E /* WriteDiaryViewController.swift */; };
+		A5A03F7D283BB7340005E41E /* StarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A03F7C283BB7340005E41E /* StarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,11 @@
 		A5A03F65283B912C0005E41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5A03F6C283B92FB0005E41E /* StarDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarDiaryViewController.swift; sourceTree = "<group>"; };
 		A5A03F6E283B930B0005E41E /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		A5A03F74283BA5FB0005E41E /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		A5A03F76283BA9260005E41E /* DiaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A5A03F78283BB4B10005E41E /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
+		A5A03F7A283BB68F0005E41E /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
+		A5A03F7C283BB7340005E41E /* StarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A03F72283BA5100005E41E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +73,8 @@
 				A5A03F57283B912B0005E41E /* AppDelegate.swift */,
 				A5A03F59283B912B0005E41E /* SceneDelegate.swift */,
 				A5A03F5B283B912B0005E41E /* TabBarController.swift */,
-				A5A03F6B283B92E50005E41E /* Scenes */,
+				A5A03F73283BA5DA0005E41E /* Diary */,
+				A5A03F6B283B92E50005E41E /* Star */,
 				A5A03F60283B912C0005E41E /* Assets.xcassets */,
 				A5A03F62283B912C0005E41E /* LaunchScreen.storyboard */,
 				A5A03F65283B912C0005E41E /* Info.plist */,
@@ -69,13 +82,25 @@
 			path = Swift_DiaryApp;
 			sourceTree = "<group>";
 		};
-		A5A03F6B283B92E50005E41E /* Scenes */ = {
+		A5A03F6B283B92E50005E41E /* Star */ = {
 			isa = PBXGroup;
 			children = (
 				A5A03F6C283B92FB0005E41E /* StarDiaryViewController.swift */,
-				A5A03F6E283B930B0005E41E /* DiaryViewController.swift */,
+				A5A03F7C283BB7340005E41E /* StarCollectionViewCell.swift */,
 			);
-			path = Scenes;
+			path = Star;
+			sourceTree = "<group>";
+		};
+		A5A03F73283BA5DA0005E41E /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				A5A03F6E283B930B0005E41E /* DiaryViewController.swift */,
+				A5A03F74283BA5FB0005E41E /* Diary.swift */,
+				A5A03F76283BA9260005E41E /* DiaryCollectionViewCell.swift */,
+				A5A03F78283BB4B10005E41E /* DiaryDetailViewController.swift */,
+				A5A03F7A283BB68F0005E41E /* WriteDiaryViewController.swift */,
+			);
+			path = Diary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +119,9 @@
 			dependencies = (
 			);
 			name = Swift_DiaryApp;
+			packageProductDependencies = (
+				A5A03F71283BA5100005E41E /* SnapKit */,
+			);
 			productName = Swift_DiaryApp;
 			productReference = A5A03F54283B912A0005E41E /* Swift_DiaryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +150,9 @@
 				Base,
 			);
 			mainGroup = A5A03F4B283B912A0005E41E;
+			packageReferences = (
+				A5A03F70283BA5100005E41E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A5A03F55283B912A0005E41E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,8 +182,13 @@
 				A5A03F5C283B912B0005E41E /* TabBarController.swift in Sources */,
 				A5A03F6F283B930B0005E41E /* DiaryViewController.swift in Sources */,
 				A5A03F58283B912B0005E41E /* AppDelegate.swift in Sources */,
+				A5A03F7B283BB68F0005E41E /* WriteDiaryViewController.swift in Sources */,
 				A5A03F6D283B92FB0005E41E /* StarDiaryViewController.swift in Sources */,
 				A5A03F5A283B912B0005E41E /* SceneDelegate.swift in Sources */,
+				A5A03F7D283BB7340005E41E /* StarCollectionViewCell.swift in Sources */,
+				A5A03F79283BB4B10005E41E /* DiaryDetailViewController.swift in Sources */,
+				A5A03F75283BA5FB0005E41E /* Diary.swift in Sources */,
+				A5A03F77283BA9260005E41E /* DiaryCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5A03F70283BA5100005E41E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5A03F71283BA5100005E41E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5A03F70283BA5100005E41E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A5A03F4C283B912A0005E41E /* Project object */;
 }
